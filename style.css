@@ -1,0 +1,131 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6; /* Light, calming background */
+    color: #333;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#avatarImage {
+    width: 180px; /* Slightly larger avatar */
+    height: 180px;
+    border-radius: 50%; /* Makes it round */
+    overflow: hidden; /* Ensures image stays within bounds */
+    border: 4px solid #007bff; /* Primary color border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 25px;
+    display: flex; /* For centering content if it's just text initially */
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em; /* Larger text for initial 'First name' */
+    color: #555;
+    background-color: #e9ecef; /* Light background for the avatar placeholder */
+}
+
+#avatarImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px; /* Constrain form width */
+    margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
+}
+
+label {
+    display: block; /* Each label on its own line */
+    margin-bottom: 8px;
+    font-weight: 600; /* Slightly bolder labels */
+    color: #555;
+    font-size: 0.95em;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 12px 10px;
+    margin-bottom: 18px; /* More space between inputs */
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #495057;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+input[readonly] {
+    background-color: #e9ecef; /* Light gray background for readonly inputs */
+    cursor: default; /* Indicate not editable */
+}
+
+input[type="file"] {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 15px; /* Space between buttons */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#sumbitForm {
+    background-color: #28a745; /* Success green for submit */
+}
+
+#sumbitForm:hover {
+    background-color: #218838;
+}
+
+#deleteContact {
+    background-color: #dc3545; /* Danger red for delete */
+}
+
+#deleteContact:hover {
+    background-color: #c82333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+        margin: 15px;
+    }
+    button {
+        display: block; /* Stack buttons on small screens */
+        width: calc(100% - 30px);
+        margin: 10px auto;
+    }
+}
